@@ -28,9 +28,9 @@ class Home extends Component {
   // the addTodo function simply creates a new array that includes the user submitted todo item and then
   // updates the state with the new list.
   addTodo = (todo) => {
-    if(todo.due == null || todo.due ==="Invalid Date"){ return}
 
     const exists = this.state.todos.find(t => t.content === todo.content);
+    if(todo.due == null || todo.due ==="Invalid Date"){ return}
     if (exists) { return }
 
     todo.id = this.state.todos.find(t => t.content === todo.content);
@@ -66,4 +66,3 @@ class Home extends Component {
 }
 
 export default Home;
-a
